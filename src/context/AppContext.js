@@ -7,6 +7,7 @@ function AppProvider(props) {
   const [progress, setProgress] = useState();
   const [currentSlide, setCurrentSlide] = useState(1);
   const [total, setTotal] = useState();
+  const [quizComplete, setQuizComplete] = useState(false);
 
   // Recalculates progress bar percentage on every slide change
   function toggleProgress() {
@@ -28,6 +29,12 @@ function AppProvider(props) {
     setCurrentSlide(currentSlide);
   }
 
+  // Sets quiz state to complete
+  function onQuizCompletion(obj) {
+    setQuizComplete(true);
+    console.log(quizComplete);
+  }
+
   const value = {
     progress: progress,
     toggleProgress: toggleProgress,
@@ -35,6 +42,8 @@ function AppProvider(props) {
     currentSlide: currentSlide,
     onSlideChange: onSlideChange,
     initProgress: initProgress,
+    onQuizCompletion: onQuizCompletion,
+    quizComplete: quizComplete,
   };
 
   return (

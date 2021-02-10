@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import { Slide } from 'react-slideshow-image';
 import { AppContext } from '../../context/AppContext';
+import Quiz from 'react-quiz-component';
+import { quiz } from '../Quiz/Quiz';
 
 function Slides() {
   // State management
@@ -31,7 +33,10 @@ function Slides() {
       </div>
     ),
     nextArrow: (
-      <div style={{ width: '30px', marginLeft: '-30px' }}>
+      <div
+        className='next-arrow'
+        style={{ width: '30px', marginLeft: '-30px' }}
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'
@@ -47,9 +52,33 @@ function Slides() {
     },
   };
 
+  // Determines if Check on Learning has been completed and allows user to move forward
+  if (context.currentSlide === 2 && context.quizComplete === false) {
+    console.log('Quiz shown');
+    document.querySelector('.next-arrow').style.display = 'none';
+  }
+
+  // Sets post-quiz state
+  const onCompleteAction = (obj) => {
+    document.querySelector('.next-arrow').style.display = 'block';
+    context.onQuizCompletion();
+  };
+
   // Changes slide to specific index from dropdown menu
+  // TODO: Implement menu modal with slide list
   const goto = ({ target }) => {
     slideRef.current.goTo(parseInt(target.value, 10));
+  };
+
+  // Renders custom results page
+  // TODO: Add button to rerender quiz.
+  const renderCustomResultPage = (obj) => {
+    console.log(obj);
+    return (
+      <div>
+        <h4>Well done, you may now continue with the lesson.</h4>
+      </div>
+    );
   };
 
   return (
@@ -98,18 +127,27 @@ function Slides() {
                   tenetur eaque itaque officia corporis eligendi doloribus vitae
                   non, ratione commodi delectus deserunt ab provident quidem.
                 </span>
-                <select onChange={goto}>
-                  <option>--Select--</option>
-                  <option value='0'>First</option>
-                  <option value='1'>Second</option>
-                  <option value='2'>Third</option>
-                </select>
               </div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <span>Slide 2</span>
+            <div className='row'>
+              <div className='col-6'>
+                <Quiz
+                  quiz={quiz}
+                  continueTillCorrect={true}
+                  showDefaultResult={false}
+                  onComplete={onCompleteAction}
+                  customResultPage={renderCustomResultPage}
+                />
+              </div>
+              <div className='col-6 d-flex p-5 justify-content-center'>
+                <img
+                  style={{ height: '300px' }}
+                  src='https://ssilrc.army.mil/resources/FMS/GFEBS/GFEBSLegacy/L413E/1FinancialReporting/html/images/qanda_-_info.png'
+                  alt=''
+                />
+              </div>
             </div>
           </div>
           <div className='slide'>

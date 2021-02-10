@@ -1,10 +1,13 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../context/AppContext';
+import Menu from '../Menu/Menu';
 
 export default function Header() {
   const context = useContext(AppContext);
+
+  function showMenu() {}
 
   return (
     <>
