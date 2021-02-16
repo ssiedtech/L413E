@@ -4,6 +4,8 @@ import { faFolder, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../context/AppContext';
 import Menu from '../Menu/Menu';
 
+import Shield from '../../img/shield.png';
+
 export default function Header() {
   const context = useContext(AppContext);
 
@@ -18,11 +20,7 @@ export default function Header() {
       <div className='d-flex justify-content-between'>
         <div class='title align-items-end row ml-5 p-3'>
           <div className='p-2'>
-            <img
-              style={{ height: '80px' }}
-              src='https://ssilrc.army.mil/resources/FMS/GFEBS/GFEBSLegacy/Launchers/L410E/html/images/shield-01.png'
-              alt=''
-            />
+            <img style={{ height: '80px' }} src={Shield} alt='' />
           </div>
           <div style={{ lineHeight: '60%' }}>
             <div

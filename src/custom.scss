@@ -1,6 +1,6 @@
 $theme-colors: (
-  'btn-primary': purple,
+  'primary': rgb(0, 155, 209),
   'danger': #ff4136,
 );
 
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/bootstrap/scss/bootstrap';

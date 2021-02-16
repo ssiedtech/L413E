@@ -14,6 +14,12 @@ function Slides() {
     context.toggleProgress();
   }, [context]);
 
+  // let slideTitles = document.getElementsByClassName('slide-title');
+
+  // const listItems = slideTitles.entries();
+
+  // console.log(listItems);
+
   // React-Slideshow package settings
   const properties = {
     indicators: false,
@@ -49,14 +55,17 @@ function Slides() {
     ),
     onChange: (previous, next) => {
       context.onSlideChange(previous, next);
+      console.log(context.currentSlide);
     },
   };
 
   // Determines if Check on Learning has been completed and allows user to move forward
-  if (context.currentSlide === 2 && context.quizComplete === false) {
-    console.log('Quiz shown');
-    document.querySelector('.next-arrow').style.display = 'none';
-  }
+  // TODO: This keeps fudigng up. Need to fix
+
+  // if (context.currentSlide === 2 && context.quizComplete === false) {
+  //   console.log('Quiz shown');
+  //   document.querySelector('.next-arrow').style.display = 'none';
+  // }
 
   // Sets post-quiz state
   const onCompleteAction = (obj) => {
@@ -102,6 +111,7 @@ function Slides() {
                     color: '#fa4e10',
                     fontWeight: 'bold',
                   }}
+                  className='slide-title'
                 >
                   Welcome to Financial Reporting
                 </h3>
@@ -152,12 +162,12 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 3</span>
+              <h3 className='slide-title'>Slide 3</h3>
             </div>
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 4</span>
+              <h3 className='slide-title'>Slide 4</h3>
             </div>
           </div>
           <div className='slide'>

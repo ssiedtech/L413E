@@ -7,6 +7,7 @@ export const quiz = {
       questionType: 'text',
       answers: ['True', 'False'],
       correctAnswer: '1',
+      answerSelectionType: 'single',
     },
 
     // ** Uncomment questions below to put them back in **
