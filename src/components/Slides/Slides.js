@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import React, { useRef, useEffect, useLayoutEffect, useContext } from 'react';
 import { Slide } from 'react-slideshow-image';
 import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
@@ -14,11 +14,26 @@ function Slides() {
     context.toggleProgress();
   }, [context]);
 
-  // let slideTitles = document.getElementsByClassName('slide-title');
+  // On page load, this populates the index dropdown... eventually
+  useLayoutEffect(() => {
+    console.log(
+      document.querySelector(
+        '#root > div > div.mx-auto.my-auto > div > div > div.react-slideshow-wrapper.slide > div > div.active > div > div > div:nth-child(1) > div > div > h2'
+      )
+    );
 
-  // const listItems = slideTitles.entries();
+    // if (quizTitleEl) {
+    //   quizTitleEl.classList.add('slide-title');
+    // }
 
-  // console.log(listItems);
+    let slideTitles = [...document.querySelectorAll('.slide-title')];
+
+    let listItems = slideTitles.map(
+      (title, i) => `<option value=${i}> ${title.innerText} </option>`
+    );
+
+    document.querySelector('#indexMenu').innerHTML = listItems;
+  });
 
   // React-Slideshow package settings
   const properties = {
@@ -60,7 +75,7 @@ function Slides() {
   };
 
   // Determines if Check on Learning has been completed and allows user to move forward
-  // TODO: This keeps fudigng up. Need to fix
+  // TODO: This keeps fudging up. Need to fix
 
   // if (context.currentSlide === 2 && context.quizComplete === false) {
   //   console.log('Quiz shown');
@@ -105,16 +120,8 @@ function Slides() {
           <div className='slide'>
             <div className='row p-3 m-1'>
               <div className='col'>
-                <h3
-                  style={{
-                    fontSize: '24px',
-                    color: '#fa4e10',
-                    fontWeight: 'bold',
-                  }}
-                  className='slide-title'
-                >
-                  Welcome to Financial Reporting
-                </h3>
+                <h3 className='slide-title'>Welcome to Financial Reporting</h3>
+                <select onChange={goto} id='indexMenu'></select>;
                 <span>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Omnis, explicabo aliquam voluptatibus, reprehenderit saepe
@@ -172,7 +179,7 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 5</span>
+              <span className='slide-title'>Slide 5</span>
             </div>
           </div>
           <div className='slide'>

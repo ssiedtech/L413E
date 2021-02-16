@@ -3,4 +3,11 @@ $theme-colors: (
   'danger': #ff4136,
 );
 
+.slide-title,
+.react-quiz-container h2 {
+  font-size: 24px;
+  color: #fa4e10;
+  font-weight: bold;
+}
+
 @import '../node_modules/bootstrap/scss/bootstrap';
