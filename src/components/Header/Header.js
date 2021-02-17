@@ -1,15 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../context/AppContext';
-import Menu from '../Menu/Menu';
-
+import { Button, Modal, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Shield from '../../img/shield.png';
 
 export default function Header() {
   const context = useContext(AppContext);
+  const [show, setShow] = useState(false);
 
-  function showMenu() {}
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  function handleIndexClick() {}
 
   return (
     <>
@@ -65,12 +68,28 @@ export default function Header() {
             ></div>
           </div>
           <div className='d-flex justify-content-between'>
-            <button type='button' className='btn btn-primary'>
+            <Button variant='primary' onClick={handleShow}>
               <FontAwesomeIcon icon={faFolder} /> Index
-            </button>
-            <button type='button' className='btn btn-primary'>
+            </Button>
+
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Index</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <ListGroup>
+                  {context.index &&
+                    context.index.map((title, i) => (
+                      <ListGroup.Item action key={i} onClick={handleIndexClick}>
+                        {title}
+                      </ListGroup.Item>
+                    ))}
+                </ListGroup>
+              </Modal.Body>
+            </Modal>
+            <Button variant='primary'>
               <FontAwesomeIcon icon={faTimes} /> Exit
-            </button>
+            </Button>
           </div>
         </div>
       </div>

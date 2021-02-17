@@ -12,28 +12,35 @@ function Slides() {
   // Calculates and sets progress bar percentage after every slide change
   useEffect(() => {
     context.toggleProgress();
+
+    // Removes back arrow on first slide
+    if (context.currentSlide === 1) {
+      document.querySelector(
+        '#root > div > div.mx-auto.my-auto > div > div > div.undefined.nav'
+      ).style.display = 'none';
+    } else {
+      document.querySelector(
+        '#root > div > div.mx-auto.my-auto > div > div > div.undefined.nav'
+      ).style.display = 'block';
+    }
+
+    // Removes next arrow on final slide
+    if (context.currentSlide === context.total) {
+      document.querySelector(
+        '#root > div > div.mx-auto.my-auto > div > div > div.next-arrow.nav'
+      ).style.display = 'none';
+    } else {
+      document.querySelector(
+        '#root > div > div.mx-auto.my-auto > div > div > div.next-arrow.nav'
+      ).style.display = 'block';
+    }
   }, [context]);
 
-  // On page load, this populates the index dropdown... eventually
-  useLayoutEffect(() => {
-    console.log(
-      document.querySelector(
-        '#root > div > div.mx-auto.my-auto > div > div > div.react-slideshow-wrapper.slide > div > div.active > div > div > div:nth-child(1) > div > div > h2'
-      )
-    );
-
-    // if (quizTitleEl) {
-    //   quizTitleEl.classList.add('slide-title');
-    // }
-
-    let slideTitles = [...document.querySelectorAll('.slide-title')];
-
-    let listItems = slideTitles.map(
-      (title, i) => `<option value=${i}> ${title.innerText} </option>`
-    );
-
-    document.querySelector('#indexMenu').innerHTML = listItems;
-  });
+  // On page load, this populates the index dropdown and hides back arrow on page one to
+  useEffect(() => {
+    context.compileIndex();
+    console.log('compiled');
+  }, []);
 
   // React-Slideshow package settings
   const properties = {
@@ -121,7 +128,6 @@ function Slides() {
             <div className='row p-3 m-1'>
               <div className='col'>
                 <h3 className='slide-title'>Welcome to Financial Reporting</h3>
-                <select onChange={goto} id='indexMenu'></select>;
                 <span>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Omnis, explicabo aliquam voluptatibus, reprehenderit saepe
