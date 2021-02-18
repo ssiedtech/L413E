@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../context/AppContext';
-import { Button, Modal, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Button, Modal, ListGroup } from 'react-bootstrap';
+
 import Shield from '../../img/shield.png';
 
 export default function Header() {
@@ -12,7 +13,12 @@ export default function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  function handleIndexClick() {}
+  function handleIndexClick(e) {
+    const index = e.target.getAttribute('data-rb-event-key');
+    context.setCurrentSlide(index);
+    console.log(index);
+    setShow(false);
+  }
 
   return (
     <>
@@ -62,7 +68,7 @@ export default function Header() {
               className='progress-bar progress-bar-striped bg-success'
               role='progressbar'
               style={{ width: `${context.progress}%` }}
-              aria-valuenow={`${context.progress}`}
+              aria-valuenow={parseInt(`${context.progress}`, 10)}
               aria-valuemin='0'
               aria-valuemax='100'
             ></div>
@@ -73,14 +79,20 @@ export default function Header() {
             </Button>
 
             <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Index</Modal.Title>
+              <Modal.Header variant='light' closeButton>
+                <Modal.Title className=''>
+                  <b>INDEX </b>| Financial Reporting
+                </Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <ListGroup>
+                <ListGroup variant='flush'>
                   {context.index &&
                     context.index.map((title, i) => (
-                      <ListGroup.Item action key={i} onClick={handleIndexClick}>
+                      <ListGroup.Item
+                        eventKey={i}
+                        key={i}
+                        onClick={handleIndexClick}
+                      >
                         {title}
                       </ListGroup.Item>
                     ))}

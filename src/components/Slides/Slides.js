@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useLayoutEffect, useContext } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import { Slide } from 'react-slideshow-image';
 import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
@@ -9,6 +9,9 @@ function Slides() {
   const slideRef = useRef();
   const context = useContext(AppContext);
 
+  useEffect(() => {
+    console.log('this is slide ref ' + slideRef.current);
+  }, []);
   // Calculates and sets progress bar percentage after every slide change
   useEffect(() => {
     context.toggleProgress();
@@ -41,6 +44,11 @@ function Slides() {
     context.compileIndex();
     console.log('compiled');
   }, []);
+
+  // Changes slide to specific index from dropdown menu
+  useEffect(() => {
+    slideRef.current.goTo(parseInt(context.currentSlide, 10));
+  }, [context.currentSlide]);
 
   // React-Slideshow package settings
   const properties = {
@@ -78,6 +86,7 @@ function Slides() {
     onChange: (previous, next) => {
       context.onSlideChange(previous, next);
       console.log(context.currentSlide);
+      console.log(slideRef);
     },
   };
 
@@ -93,12 +102,6 @@ function Slides() {
   const onCompleteAction = (obj) => {
     document.querySelector('.next-arrow').style.display = 'block';
     context.onQuizCompletion();
-  };
-
-  // Changes slide to specific index from dropdown menu
-  // TODO: Implement menu modal with slide list
-  const goto = ({ target }) => {
-    slideRef.current.goTo(parseInt(target.value, 10));
   };
 
   // Renders custom results page
@@ -190,17 +193,17 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 6</span>
+              <h3 className='slide-title'>Slide 6</h3>
             </div>
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 7</span>
+              <h3 className='slide-title'>Slide 7</h3>
             </div>
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 8</span>
+              <h3 className='slide-title'>Slide 8</h3>
             </div>
           </div>
           <div className='slide'>

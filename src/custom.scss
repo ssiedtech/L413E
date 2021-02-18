@@ -10,4 +10,37 @@ $theme-colors: (
   font-weight: bold;
 }
 
+.modal-body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 0 !important;
+}
+
+.list-group-item {
+  background-color: #646d74 !important;
+  color: white !important;
+  font-size: 16px !important;
+  &:hover {
+    color: gold !important;
+  }
+}
+
+.modal-title {
+  width: 100%;
+  color: white !important;
+}
+
+.modal-content {
+  background-color: #133039 !important;
+}
+
+.modal-header {
+  border-bottom: none !important;
+  color: white !important;
+  font-weight: bold !important;
+  background-color: rgb(0, 155, 209) !important;
+  border: 15px solid #133039 !important;
+}
+
 @import '../node_modules/bootstrap/scss/bootstrap';

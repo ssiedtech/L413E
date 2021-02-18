@@ -1,20 +1,19 @@
-import React, { createContext, useState, useRef } from 'react';
-import { ListGroup } from 'react-bootstrap';
+import React, { createContext, useState } from 'react';
 
 const AppContext = createContext();
 
 function AppProvider(props) {
   //Global state variables
   const [progress, setProgress] = useState();
-  const [currentSlide, setCurrentSlide] = useState(1);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [total, setTotal] = useState();
   const [quizComplete, setQuizComplete] = useState(false);
   const [index, setIndex] = useState();
 
-  const slideRef = useRef();
-
+  // Gathers all slide titles and maps them to array for Index modal
   function compileIndex() {
-    const slideTitles = [...document.querySelectorAll('.slide-title')];
+    const slideTitles = [...new Set(document.querySelectorAll('.slide-title'))];
+    console.log(slideTitles);
     const index = slideTitles.map((title, i) => `${title.innerText}`);
     setIndex(index);
     console.log(index);
@@ -45,10 +44,6 @@ function AppProvider(props) {
     setQuizComplete(true);
     console.log(quizComplete);
   }
-
-  const goto = ({ target }) => {
-    slideRef.current.goTo(parseInt(target.value, 10));
-  };
 
   const value = {
     progress: progress,

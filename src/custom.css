@@ -5,6 +5,40 @@
   font-weight: bold;
 }
 
+.modal-body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 0 !important;
+}
+
+.list-group-item {
+  background-color: #646d74 !important;
+  color: white !important;
+  font-size: 16px !important;
+}
+
+.list-group-item:hover {
+  color: gold !important;
+}
+
+.modal-title {
+  width: 100%;
+  color: white !important;
+}
+
+.modal-content {
+  background-color: #133039 !important;
+}
+
+.modal-header {
+  border-bottom: none !important;
+  color: white !important;
+  font-weight: bold !important;
+  background-color: #009bd1 !important;
+  border: 15px solid #133039 !important;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
