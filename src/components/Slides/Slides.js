@@ -9,9 +9,9 @@ function Slides() {
   const slideRef = useRef();
   const context = useContext(AppContext);
 
-  useEffect(() => {
-    console.log('this is slide ref ' + slideRef.current);
-  }, []);
+  // useEffect(() => {
+  //   console.log('this is slide ref ' + slideRef]);
+  // }, []);
   // Calculates and sets progress bar percentage after every slide change
   useEffect(() => {
     context.toggleProgress();
@@ -188,7 +188,7 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <span className='slide-title'>Slide 5</span>
+              <h3 className='slide-title'>Slide 5</h3>
             </div>
           </div>
           <div className='slide'>
@@ -208,12 +208,32 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 9</span>
+              <h3 className='slide-title'>Slide 9</h3>
             </div>
           </div>
           <div className='slide'>
             <div>
-              <span>Slide 10</span>
+              <h3 className='slide-title'>Slide 10</h3>
+            </div>
+          </div>
+          <div className='slide'>
+            <div>
+              <h3 className='slide-title'>Slide 11</h3>
+            </div>
+          </div>
+          <div className='slide'>
+            <div>
+              <h3 className='slide-title'>Slide 12</h3>
+            </div>
+          </div>
+          <div className='slide'>
+            <div>
+              <h3 className='slide-title'>Slide 13</h3>
+            </div>
+          </div>
+          <div className='slide'>
+            <div>
+              <h3 className='slide-title'>Slide 14</h3>
             </div>
           </div>
         </Slide>

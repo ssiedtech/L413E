@@ -10,6 +10,11 @@ $theme-colors: (
   font-weight: bold;
 }
 
+.modal {
+  height: 732px !important;
+  overflow-y: scroll;
+}
+
 .modal-body {
   padding-left: 1rem;
   padding-right: 1rem;

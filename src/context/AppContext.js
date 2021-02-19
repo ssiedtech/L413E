@@ -12,7 +12,10 @@ function AppProvider(props) {
 
   // Gathers all slide titles and maps them to array for Index modal
   function compileIndex() {
-    const slideTitles = [...new Set(document.querySelectorAll('.slide-title'))];
+    const slideTitles = [...document.querySelectorAll('.slide-title')].slice(
+      1,
+      -1
+    );
     console.log(slideTitles);
     const index = slideTitles.map((title, i) => `${title.innerText}`);
     setIndex(index);

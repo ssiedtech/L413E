@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../../context/AppContext';
@@ -19,6 +19,12 @@ export default function Header() {
     console.log(index);
     setShow(false);
   }
+
+  const closeWindow = () => {
+    window.opener = null;
+    window.open('', '_self');
+    window.close();
+  };
 
   return (
     <>
@@ -99,7 +105,7 @@ export default function Header() {
                 </ListGroup>
               </Modal.Body>
             </Modal>
-            <Button variant='primary'>
+            <Button onClick={closeWindow} variant='primary'>
               <FontAwesomeIcon icon={faTimes} /> Exit
             </Button>
           </div>
