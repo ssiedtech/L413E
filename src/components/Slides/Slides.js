@@ -178,7 +178,7 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <h3 className='slide-title'>Slide 3</h3>
+              <h3 className='slide-title'>Check Learning</h3>
             </div>
           </div>
           <div className='slide'>
