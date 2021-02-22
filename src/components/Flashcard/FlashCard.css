@@ -1,0 +1,45 @@
+
+.card-flex{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.card-flex h1{
+    color:white;
+}
+
+.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px rgba(87, 90, 92, 0.3);
+    width:200px;
+    height:150px;
+    transform-style: preserve-3d;
+    background-color: aliceblue;
+    transform:  rotateY(var(--rotate-y, 0));
+    transition:1s;
+    cursor: pointer;
+    margin:1rem;
+    
+}
+
+.card.flip{
+    --rotate-y: 180deg;
+}
+.card .front,
+.card .back{
+    position:absolute;
+    backface-visibility: hidden;
+}
+
+.card .back{
+    transform: rotateY(180deg);
+}
+
