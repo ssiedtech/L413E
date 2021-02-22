@@ -4,6 +4,7 @@ import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
 import FlashCardList from '../FlashCard/FlashCardList.js';
+import QuizComponent from '../QuizComponent/QuizComponent.js';
 
 function Slides() {
   // State management
@@ -179,7 +180,7 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <h3 className='slide-title'>Terms</h3>
+              <h3 className='slide-title'>Slide3</h3>
               <FlashCardList/>
               <FlashCardList/>
             </div>
@@ -187,6 +188,7 @@ function Slides() {
           <div className='slide'>
             <div>
               <h3 className='slide-title'>Slide 4</h3>
+              <QuizComponent/>
             </div>
           </div>
           <div className='slide'>

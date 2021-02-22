@@ -24,6 +24,7 @@ export default function Header() {
     window.opener = null;
     window.open('', '_self');
     window.close();
+
   };
 
   return (
@@ -63,7 +64,7 @@ export default function Header() {
                 MANAGEMENT SCHOOL
               </h5>
             </div>
-            <h5 style={{ color: '#f5d755', fontWeight: 'bold' }}>
+            <h5 style={{ color: '#f5d755', fontWeight: 'bold', letterSpacing:'1px' }}>
               GFEBS L413E Financial Reporting
             </h5>
           </div>
@@ -112,7 +113,7 @@ export default function Header() {
         </div>
       </div>
       <span
-        className='d-flex mx-auto justify-content-end p-1'
+        className='d-flex mx-auto justify-content-center p-1'
         style={{
           width: '900px',
           backgroundColor: '#494949',

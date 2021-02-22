@@ -1,22 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
 $theme-colors: (
-  'primary': rgb(0, 155, 209),
+  'primary': #009bd1,
   'danger': #ff4136,
+  
 );
+
+$primary-color: #1b1b1b;
+$secondary-color:linear-gradient(90deg, rgb(44, 145, 165) 0%, rgb(36, 113, 131) 100%);
+$main-font: 'Poppins', sans-serif;
+$banner-color: #000;
+
 
 .slide-title,
 .react-quiz-container h2 {
   font-size: 24px;
-  color: #fa4e10;
+  color: $primary-color;
   font-weight: bold;
 }
+
+// .slide{
+//   padding:.5rem;
+// }
 
 .modal {
   height: 732px !important;
   overflow-y: initial;
-  font-family: 'Poppins', sans-serif;
+  font:  100% $main-font;
 
+}
+
+.App{
+  background: $secondary-color;
+  font: 100% $main-font;
+  position: relative;
 }
 
 .modal-body {
@@ -61,7 +78,7 @@ $theme-colors: (
 
 .modal-content {
   // background-color: #214553 !important;
-  background: linear-gradient(90deg, rgb(29, 122, 141) 0%, rgb(30, 105, 122) 100%);
+  background: $secondary-color;
 }
 
 .modal-header {
@@ -99,12 +116,26 @@ button.close {
   background: rgb(218, 218, 218),;
   padding: 1rem 0 1rem 0;
   border-radius: 4px 0px 0px 4px;
+  width:40px;
+  position: absolute;
+  right:0;
+ 
 }
 
 .undefined.nav{
   background: rgb(218, 218, 218),;
   padding: 1rem 0 1rem 0;
   border-radius: 0px 4px 4px 0px;
+  position: absolute;
+  left:0;
+}
+
+.justify-content-end[style]{
+  justify-content: flex-end;
+}
+
+.p-1[style] {
+  padding: 0.75rem !important;
 }
 
 
