@@ -18,6 +18,10 @@
   padding-right: 1rem;
   padding-bottom: 1rem;
   padding-top: 0;
+}
+
+.list-group {
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
