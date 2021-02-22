@@ -44,6 +44,7 @@
           box-shadow: 0px 3px 8px rgba(121, 121, 121, 0.3);
   z-index: 10;
   border: none;
+  letter-spacing: 1px;
 }
 
 .modal-title {
@@ -76,7 +77,6 @@ button.close {
   width: 15px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 10px silver;
           box-shadow: inset 0 0 10px silver;
@@ -84,12 +84,25 @@ button.close {
   background-color: white;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #c9c9c9;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 3px rgba(53, 53, 53, 0.8);
           box-shadow: 0px 0px 3px rgba(53, 53, 53, 0.8);
+}
+
+.next-arrow.nav {
+  background: #dadada;
+  padding: 1rem 0 1rem 0;
+  border-radius: 4px 0px 0px 4px;
+  cursor: pointer;
+}
+
+.undefined.nav {
+  background: #dadada;
+  padding: 1rem 0 1rem 0;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
 }
 
 /*!
