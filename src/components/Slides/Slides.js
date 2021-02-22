@@ -9,9 +9,6 @@ function Slides() {
   const slideRef = useRef();
   const context = useContext(AppContext);
 
-  // useEffect(() => {
-  //   console.log('this is slide ref ' + slideRef]);
-  // }, []);
   // Calculates and sets progress bar percentage after every slide change
   useEffect(() => {
     context.toggleProgress();

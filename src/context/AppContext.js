@@ -32,7 +32,6 @@ function AppProvider(props) {
   // Initializes progress bar
   function initProgress() {
     let progressBar = (1 / total) * 100;
-    console.log('initial progress is ' + progressBar + '%');
     setProgress(progressBar);
   }
 
