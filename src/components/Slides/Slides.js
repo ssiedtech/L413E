@@ -1,14 +1,16 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import { Slide } from 'react-slideshow-image';
 import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
-import FlashCardList from '../FlashCard/FlashCardList.js';
+import FlashCardList from '../Flashcard/FlashCardList';
 
 function Slides() {
   // State management
   const slideRef = useRef();
   const context = useContext(AppContext);
+
+  const [key, setKey] = useState();
 
   // Calculates and sets progress bar percentage after every slide change
   useEffect(() => {
@@ -47,6 +49,11 @@ function Slides() {
   useEffect(() => {
     slideRef.current.goTo(parseInt(context.currentSlide, 10));
   }, [context.currentSlide]);
+
+  // Resets Quiz key to random number and rerenders it... there's probably a better way to do this.
+  function retakeQuiz() {
+    return setKey({ key: Math.random() });
+  }
 
   // React-Slideshow package settings
   const properties = {
@@ -109,6 +116,9 @@ function Slides() {
     return (
       <div>
         <h4>Well done, you may now continue with the lesson.</h4>
+        <button onClick={retakeQuiz} className='btn btn-primary'>
+          Retake
+        </button>
       </div>
     );
   };
@@ -159,6 +169,7 @@ function Slides() {
               <div className='col-6'>
                 <Quiz
                   quiz={quiz}
+                  key={key}
                   continueTillCorrect={true}
                   showDefaultResult={false}
                   onComplete={onCompleteAction}
@@ -177,8 +188,8 @@ function Slides() {
           <div className='slide'>
             <div>
               <h3 className='slide-title'>Terms</h3>
-              <FlashCardList/>
-              <FlashCardList/>
+              <FlashCardList />
+              <FlashCardList />
             </div>
           </div>
           <div className='slide'>
