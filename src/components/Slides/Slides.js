@@ -3,10 +3,6 @@ import { Slide } from 'react-slideshow-image';
 import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
-<<<<<<< HEAD
-import FlashCardList from '../FlashCard/FlashCardList.js';
-import QuizComponent from '../QuizComponent/QuizComponent.js';
-=======
 import FlashCardList from '../Flashcard/FlashCardList';
 >>>>>>> 0d5a04544c3fe3e2cf7aff8da1427adce73e0949
 
