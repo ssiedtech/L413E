@@ -39,7 +39,7 @@ const QuizComponent = (props)=>{
     return(
         //Ternary fire, dynamically display Score, loop through array.
         <div className="quiz-container"> 
-                <h1>Quiz Component</h1>
+                <h1>Check Learning</h1>
                 <br/>
                 {showScore ? 
                 (<div className="score">You scored {score} out {questions.length}<button className="quiz-button" onClick={resetStateClick}>Retry</button></div>) :
@@ -47,11 +47,13 @@ const QuizComponent = (props)=>{
                 (<div>
                     <div className="quiz-count"><span>Question {currentQuestion+1}</span>/{questions.length}</div>
                     <div className="quiz-question">{questions[currentQuestion].questionText}</div>
+                    <br/>
                     <div className="quiz-options">
                         {questions[currentQuestion].answerOptions.map((answerOptions)=> (
                         <button className="quiz-button"onClick= {()=> handleAnswerClick(answerOptions.isCorrect)}>{answerOptions.answerText}</button>
                         ))}
                     </div>
+                    <br/>
                     <div>
                         <p>Your Last Score: {recordedScore}</p>
                     </div>

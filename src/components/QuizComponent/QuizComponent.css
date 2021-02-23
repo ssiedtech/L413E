@@ -4,15 +4,14 @@
 .quiz-container{
     text-align: center;
     display:block;
-    background-color: aliceblue;
+    background-color: transparent;
     align-self: center;
-    padding: 1rem;
-    box-shadow: 0px 2px 3px #ccc;
+    padding: 2rem;
     
 }
 
 .quiz-question{
-    
+   
     font-family: 'Poppins', sans-serif;
     font-size:1.5rem;
   
@@ -20,13 +19,13 @@
 
 .quiz-button{
     width:100px;
-    background:#6668f4;
+    background:#3f3f41;
     border: none;
     padding:1rem;
     border-radius: 4px;
     color:white;
     margin:1rem;
-    box-shadow: 0px 2px 3px #3c3d9b;
+    box-shadow: 0px 2px 5px rgb(15, 15, 15, 0.3);
     cursor:pointer;
 
 }
@@ -40,9 +39,3 @@
     
 }
 
-@media screen and (max-width: 800px){
-    .quiz-button{
-        width:80%;
-       
-    }
-}

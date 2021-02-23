@@ -1,23 +1,23 @@
 const questions = [
     {
-        questionText: 'This is Question 1',
+        questionText: 'What is 2 + 2?',
         answerOptions: [
-            {answerText: 'Incorrect', isCorrect: false},
-            {answerText: 'Correct', isCorrect: true},
-            {answerText: 'Incorrect', isCorrect: false},
-            {answerText: 'Incorrect', isCorrect: false},
+            {answerText: '4', isCorrect: false},
+            {answerText: '2', isCorrect: true},
+            {answerText: '6', isCorrect: false},
+            {answerText: '5', isCorrect: false},
         ],
     
     
     },
     
     {
-        questionText: 'This is Question 2',
+        questionText: 'What color is this text?',
         answerOptions: [
-            { answerText: 'Incorrect', isCorrect: false },
-            { answerText: 'Incorrect', isCorrect: false },
-            { answerText: 'Incorrect', isCorrect: false },
-            { answerText: 'Correct', isCorrect: true },
+            { answerText: 'Purple', isCorrect: false },
+            { answerText: 'Green', isCorrect: false },
+            { answerText: 'Orange', isCorrect: false },
+            { answerText: 'Black', isCorrect: true },
         ],
     },
     

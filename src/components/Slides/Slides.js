@@ -53,7 +53,7 @@ function Slides() {
 
   // Resets Quiz key to random number and rerenders it... there's probably a better way to do this.
   function retakeQuiz() {
-    return setKey({ key: Math.random() });
+    return setKey(Math.random());
   }
 
   // React-Slideshow package settings
@@ -101,10 +101,10 @@ function Slides() {
   // Determines if Check on Learning has been completed and allows user to move forward
   // TODO: This keeps fudging up. Need to fix
 
-  // if (context.currentSlide === 2 && context.quizComplete === false) {
-  //   console.log('Quiz shown');
-  //   document.querySelector('.next-arrow').style.display = 'none';
-  // }
+  if (context.currentSlide === 2 && context.quizComplete === false) {
+    console.log('Quiz shown');
+    document.querySelector('.next-arrow').style.display = 'none';
+  }
 
   // Sets post-quiz state
   const onCompleteAction = (obj) => {

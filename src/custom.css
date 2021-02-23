@@ -2,8 +2,26 @@
 .slide-title,
 .react-quiz-container h2 {
   font-size: 24px;
-  color: #1b1b1b;
+  color: #ff4136;
   font-weight: bold;
+}
+
+.progress.mb-3 {
+  border-radius: 50px;
+}
+
+.progress-bar {
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 3px 8px rgba(60, 85, 15, 0.9);
+          box-shadow: 0px 3px 8px rgba(60, 85, 15, 0.9);
+}
+
+.bg-success[style] {
+  background-color: #a4c751 !important;
+}
+
+.progress-bar-striped[style] {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent);
 }
 
 .modal {
@@ -13,8 +31,8 @@
 }
 
 .App {
-  background: -webkit-gradient(linear, left top, right top, from(#2c91a5), to(#247183));
-  background: linear-gradient(90deg, #2c91a5 0%, #247183 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#0b313a), to(#0b313a));
+  background: linear-gradient(90deg, #0b313a 0%, #0b313a 100%);
   font: 100% "Poppins", sans-serif;
   position: relative;
 }
@@ -61,16 +79,16 @@
 }
 
 .modal-content {
-  background: -webkit-gradient(linear, left top, right top, from(#2c91a5), to(#247183));
-  background: linear-gradient(90deg, #2c91a5 0%, #247183 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#0b313a), to(#0b313a));
+  background: linear-gradient(90deg, #0b313a 0%, #0b313a 100%);
 }
 
 .modal-header {
   border-bottom: none !important;
   color: white !important;
   font-weight: bold !important;
-  background: -webkit-gradient(linear, left top, right top, from(#1d7a8d), to(#1e697a));
-  background: linear-gradient(90deg, #1d7a8d 0%, #1e697a 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#0b313a), to(#0b313a));
+  background: linear-gradient(90deg, #0b313a 0%, #0b313a 100%);
 }
 
 button.close {
@@ -99,30 +117,40 @@ button.close {
 }
 
 .next-arrow.nav {
-  background: #dadada;
-  padding: 1rem 0 1rem 0;
+  background: #009bd1;
+  padding: 3rem 0 3rem 0;
   border-radius: 4px 0px 0px 4px;
   width: 40px;
   position: absolute;
   right: 0;
+  cursor: pointer;
+}
+
+.fas.fa-arrow-right {
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+  margin-left: 5px;
+}
+
+.fas.fa-arrow-left {
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+  margin-left: 5px;
 }
 
 .undefined.nav {
-  background: #dadada;
-  padding: 1rem 0 1rem 0;
+  background: #009bd1;
+  padding: 3rem 0 3rem 0;
   border-radius: 0px 4px 4px 0px;
   position: absolute;
   left: 0;
-}
-
-.justify-content-end[style] {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  cursor: pointer;
 }
 
 .p-1[style] {
-  padding: 0.75rem !important;
+  padding: 0.50rem !important;
 }
 
 /*!
