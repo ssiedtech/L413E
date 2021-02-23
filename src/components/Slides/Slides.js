@@ -64,29 +64,33 @@ function Slides() {
     defaultIndex: 0,
     prevArrow: (
       <div style={{ width: '30px', marginRight: '-30px' }}>
-        <svg
+        
+        <i class="fas fa-arrow-left"></i>
+        
+        {/* <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'
           height='24'
           viewBox='0 0 24 24'
         >
           <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
-        </svg>
+        </svg> */}
       </div>
     ),
     nextArrow: (
       <div
         className='next-arrow'
-        style={{ width: '30px', marginLeft: '-30px' }}
-      >
-        <svg
+        style={{ width: '30px', marginLeft: '-30px' }}>
+        
+        <i class="fas fa-arrow-right"></i>
+
+        {/* <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'
           height='24'
           viewBox='0 0 24 24'
-        >
-          <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
-        </svg>
+        ><path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' /></svg> */}
+
       </div>
     ),
     onChange: (previous, next) => {
@@ -188,13 +192,13 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <h3 className='slide-title'>Slide3</h3>
+              <h3 className='slide-title'>Key Terms</h3>
               <FlashCardList/>
             </div>
           </div>
           <div className='slide'>
             <div>
-              <h3 className='slide-title'>Slide 4</h3>
+              <h3 className='slide-title'>Quiz Check</h3>
               <QuizComponent/>
             </div>
           </div>

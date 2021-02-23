@@ -6,17 +6,39 @@ $theme-colors: (
   
 );
 
-$primary-color: #1b1b1b;
-$secondary-color:linear-gradient(90deg, rgb(44, 145, 165) 0%, rgb(36, 113, 131) 100%);
+$secondary-color: #ff4136;
+$primary-color:linear-gradient(90deg, rgb(11, 49, 58) 0%, rgb(11, 49, 58) 100%);;
+$tertiary-color: #009bd1;
 $main-font: 'Poppins', sans-serif;
-$banner-color: #000;
+
 
 
 .slide-title,
 .react-quiz-container h2 {
   font-size: 24px;
-  color: $primary-color;
+  color: $secondary-color;
   font-weight: bold;
+ 
+}
+
+.progress.mb-3{
+ border-radius: 50px;
+}
+
+.progress-bar{
+  border-radius: 50px;
+  box-shadow: 0px 3px 8px rgba(60, 85, 15, 0.9);
+}
+
+.bg-success[style]{
+  background-color: #a4c751 !important;
+
+}
+
+.progress-bar-striped[style]{
+  background-image: linear-gradient(
+45deg
+, rgba(255, 255, 255, 0.30) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.30) 50%, rgba(255, 255, 255, 0.30) 75%, transparent 75%, transparent);
 }
 
 // .slide{
@@ -31,7 +53,7 @@ $banner-color: #000;
 }
 
 .App{
-  background: $secondary-color;
+  background: $primary-color;
   font: 100% $main-font;
   position: relative;
 }
@@ -78,14 +100,14 @@ $banner-color: #000;
 
 .modal-content {
   // background-color: #214553 !important;
-  background: $secondary-color;
+  background: $primary-color;
 }
 
 .modal-header {
   border-bottom: none !important;
   color: white !important;
   font-weight: bold !important;
-  background: linear-gradient(90deg, rgb(29, 122, 141) 0%, rgb(30, 105, 122) 100%);
+  background: linear-gradient(90deg, rgb(11, 49, 58) 0%, rgb(11, 49, 58) 100%);
 }
 
 button.close {
@@ -113,29 +135,46 @@ button.close {
 }
 
 .next-arrow.nav{
-  background: rgb(218, 218, 218),;
-  padding: 1rem 0 1rem 0;
+  background: $tertiary-color;
+
+  padding: 3rem 0 3rem 0;
   border-radius: 4px 0px 0px 4px;
   width:40px;
   position: absolute;
   right:0;
- 
+  cursor:pointer;
 }
 
+.fas.fa-arrow-right{
+  color:white;
+  font-size: 1.5rem;
+  display: block;
+  margin-left:5px;
+  
+ }
+
+ .fas.fa-arrow-left{
+  color:white;
+  font-size: 1.5rem;
+  display: block;
+  margin-left:5px;
+  
+ }
+
 .undefined.nav{
-  background: rgb(218, 218, 218),;
-  padding: 1rem 0 1rem 0;
+  background: $tertiary-color;
+  padding: 3rem 0 3rem 0;
   border-radius: 0px 4px 4px 0px;
   position: absolute;
   left:0;
+  cursor: pointer;
 }
 
-.justify-content-end[style]{
-  justify-content: flex-end;
-}
+
+
 
 .p-1[style] {
-  padding: 0.75rem !important;
+  padding: 0.50rem !important;
 }
 
 

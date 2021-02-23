@@ -14,6 +14,7 @@ const SampleFlashCards = [
       term: "Term3",
       definition: "Definition2",
     },
+    
   ];
 
   export default SampleFlashCards;
