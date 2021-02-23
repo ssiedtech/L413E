@@ -48,13 +48,11 @@ $main-font: 'Poppins', sans-serif;
 .modal {
   height: 732px !important;
   overflow-y: initial;
-  font:  100% $main-font;
 
 }
 
 .App{
   background: $primary-color;
-  font: 100% $main-font;
   position: relative;
 }
 
@@ -136,13 +134,16 @@ button.close {
 
 .next-arrow.nav{
   background: $tertiary-color;
-
   padding: 3rem 0 3rem 0;
   border-radius: 4px 0px 0px 4px;
   width:40px;
   position: absolute;
   right:0;
   cursor:pointer;
+  border-bottom:1px solid aliceblue;
+  border-left:1px solid aliceblue;
+  border-top:1px solid aliceblue;
+
 }
 
 .fas.fa-arrow-right{
@@ -153,22 +154,28 @@ button.close {
   
  }
 
- .fas.fa-arrow-left{
-  color:white;
-  font-size: 1.5rem;
-  display: block;
-  margin-left:5px;
-  
- }
-
-.undefined.nav{
+ .undefined.nav{
   background: $tertiary-color;
   padding: 3rem 0 3rem 0;
   border-radius: 0px 4px 4px 0px;
   position: absolute;
   left:0;
   cursor: pointer;
+  border-bottom:1px solid aliceblue;
+  border-right:1px solid aliceblue;
+  border-top:1px solid aliceblue;
+
 }
+
+ .fas.fa-arrow-left{
+  color:white;
+  font-size: 1.5rem;
+  display: block;
+  margin-right:5px;
+  
+ }
+
+
 
 
 
