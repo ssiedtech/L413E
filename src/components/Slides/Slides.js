@@ -5,7 +5,7 @@ import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
 import QuizComponent from '../QuizComponent/QuizComponent.js';
 import FlashCardList from '../Flashcard/FlashCardList.js'
-import TermList from '../TermsComponent/TermsComponent.js'
+import TermsComponent from '../TermsComponent/TermsComponent.js'
 
 function Slides() {
   // State management
@@ -194,7 +194,7 @@ function Slides() {
           <div className='slide'>
             <div>
               <h3 className='slide-title'>Slide3</h3>
-              <TermList />
+              <TermsComponent />
             </div>
           </div>
           <div className='slide'>
