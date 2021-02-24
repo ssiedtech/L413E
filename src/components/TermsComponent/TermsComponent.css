@@ -1,0 +1,32 @@
+.terms-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:1rem;
+}
+
+.terms-container-button{
+    padding:1rem;
+    border:none;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:1rem;
+}
+
+.buttons-container-button{
+    padding:1rem 4rem ;
+    background-color: rgb(143, 199, 199);
+    border:none;
+    color:white;
+    cursor: pointer;
+}
+
+.definition{
+    background:linear-gradient(90deg, rgb(11, 49, 58) 0%, rgb(11, 49, 58) 100%);
+    padding:1rem;
+    color:white;
+}
