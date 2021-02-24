@@ -1,20 +1,24 @@
-const TermsComponentData = [
-    {
-      id: 1,
-      term: "Term1",
-      definition: "Definition1",
-    },
-    {
-      id: 2,
-      term: "Term2",
-      definition: "Definition2",
-    },
-    {
-      id: 3,
-      term: "Term3",
-      definition: "Definition2",
-    },
-    
-  ];
+const terms = [
+  {
+   
+    name: "Term1",
+    definition: "This is the definition1",
+  },
+  {
+   
+    name: "Term2",
+    definition: "This is the definition2",
+  },
+  {
+   
+    name: "Term3",
+    definition: "This is the definition 3",
+  },
+  {
+   
+    name: "Term4",
+    definition: "This is the definition 4",
+  }
+];
 
-  export default TermsComponentData;
+export default terms;

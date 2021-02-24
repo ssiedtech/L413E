@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useState } from "react";
+import terms from "./TermsComponentData.js";
+import "./TermsComponent.css";
+import TermButton from "./TermComponentButtons.js"
 
 
-function TermList(){
-    const names = ['lache', 'john']
-    const namelist = names.map=(name => <h2>{name}</h2>)
 
-    return(
-        <div>
-            <h2>{namelist}</h2>
+
+function TermsComponent() {
+
+  return (
+    <div>
+      <div>
+      {terms.map((term, index) => <TermButton  term={term} />)}
         </div>
-    )
+    </div>
+  );
 }
 
-export default TermList;
+export default TermsComponent;
