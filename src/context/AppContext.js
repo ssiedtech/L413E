@@ -16,10 +16,8 @@ function AppProvider(props) {
       1,
       -1
     );
-    console.log(slideTitles);
     const index = slideTitles.map((title, i) => `${title.innerText}`);
     setIndex(index);
-    console.log(index);
   }
 
   // Recalculates progress bar percentage on every slide change
@@ -44,7 +42,6 @@ function AppProvider(props) {
   // Sets quiz state to complete
   function onQuizCompletion(obj) {
     setQuizComplete(true);
-    console.log(quizComplete);
   }
 
   const value = {
