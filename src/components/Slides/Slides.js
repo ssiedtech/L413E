@@ -5,6 +5,7 @@ import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
 import QuizComponent from '../QuizComponent/QuizComponent.js';
 import FlashCardList from '../Flashcard/FlashCardList.js';
+import TermList from '../TermsComponent/TermsComponent.js';
 
 function Slides() {
   // State management
@@ -53,7 +54,7 @@ function Slides() {
 
   // Resets Quiz key to random number and rerenders it... there's probably a better way to do this.
   function retakeQuiz() {
-    return setKey(Math.random());
+    return setKey({ key: Math.random() });
   }
 
   // React-Slideshow package settings
@@ -101,10 +102,10 @@ function Slides() {
   // Determines if Check on Learning has been completed and allows user to move forward
   // TODO: This keeps fudging up. Need to fix
 
-  if (context.currentSlide === 2 && context.quizComplete === false) {
-    console.log('Quiz shown');
-    document.querySelector('.next-arrow').style.display = 'none';
-  }
+  // if (context.currentSlide === 2 && context.quizComplete === false) {
+  //   console.log('Quiz shown');
+  //   document.querySelector('.next-arrow').style.display = 'none';
+  // }
 
   // Sets post-quiz state
   const onCompleteAction = (obj) => {
@@ -190,14 +191,13 @@ function Slides() {
           </div>
           <div className='slide'>
             <div>
-              <h3 className='slide-title'>Key Terms</h3>
-              <FlashCardList />
+              <h3 className='slide-title'>Slide3</h3>
+              <TermList />
             </div>
           </div>
           <div className='slide'>
             <div>
-              <h3 className='slide-title'>Quiz Check</h3>
-              <QuizComponent />
+              <h3 className='slide-title'>Slide4</h3>
             </div>
           </div>
           <div className='slide'>
