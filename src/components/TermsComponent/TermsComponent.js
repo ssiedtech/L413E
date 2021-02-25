@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> 2f33d1bc146ec72bf201e42cda901b6e5b928b22
 import React, { Component } from "react";
 import './TermsComponent.css';
 import terms from './TermsComponentData';
@@ -62,6 +66,23 @@ class TermsComponent extends React.Component {
       </div>
     );
   }
+<<<<<<< HEAD
 
+=======
+import terms from './TermsComponentData.js';
+import './TermsComponent.css';
+import TermButton from './TermComponentButtons.js';
+
+function TermsComponent() {
+  return (
+    <div>
+      <div>
+        {terms.map((term, index) => (
+          <TermButton key={index} term={term} />
+        ))}
+      </div>
+    </div>
+  );
+>>>>>>> 2f33d1bc146ec72bf201e42cda901b6e5b928b22
 }
 export default TermsComponent;

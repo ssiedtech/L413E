@@ -16,7 +16,6 @@ export default function Header() {
   function handleIndexClick(e) {
     const index = e.target.getAttribute('data-rb-event-key');
     context.setCurrentSlide(index);
-    console.log(index);
     setShow(false);
   }
 
@@ -24,7 +23,6 @@ export default function Header() {
     window.opener = null;
     window.open('', '_self');
     window.close();
-
   };
 
   return (
@@ -34,7 +32,7 @@ export default function Header() {
         style={{ width: '100%', height: '25px', backgroundColor: '#009bd1' }}
       ></div>
       <div className='d-flex justify-content-between'>
-        <div class='title align-items-end row ml-5 p-3'>
+        <div className='title align-items-end row ml-5 p-3'>
           <div className='p-2'>
             <img style={{ height: '80px' }} src={Shield} alt='' />
           </div>
@@ -64,7 +62,13 @@ export default function Header() {
                 MANAGEMENT SCHOOL
               </h5>
             </div>
-            <h5 style={{ color: '#f5d755', fontWeight: 'bold', letterSpacing:'1px' }}>
+            <h5
+              style={{
+                color: '#f5d755',
+                fontWeight: 'bold',
+                letterSpacing: '1px',
+              }}
+            >
               GFEBS L413E Financial Reporting
             </h5>
           </div>

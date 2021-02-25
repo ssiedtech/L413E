@@ -3,11 +3,15 @@ import { Slide } from 'react-slideshow-image';
 import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
+<<<<<<< HEAD
 import QuizComponent from '../QuizComponent/QuizComponent.js';
 import FlashCardList from '../Flashcard/FlashCardList.js'
 import TermsComponent from '../TermsComponent/TermsComponent.js'
 import TermList from '../TermsComponent/TermsComponent.js';
 
+=======
+import TermsComponent from '../TermsComponent/TermsComponent';
+>>>>>>> 2f33d1bc146ec72bf201e42cda901b6e5b928b22
 
 function Slides() {
   // State management
@@ -46,7 +50,6 @@ function Slides() {
   // On page load, this populates the index dropdown and hides back arrow on page one to
   useEffect(() => {
     context.compileIndex();
-    console.log('compiled');
   }, []);
 
   // Changes slide to specific index from dropdown menu
@@ -56,7 +59,7 @@ function Slides() {
 
   // Resets Quiz key to random number and rerenders it... there's probably a better way to do this.
   function retakeQuiz() {
-    return setKey({ key: Math.random() });
+    return setKey(Math.random());
   }
 
   // React-Slideshow package settings
@@ -67,16 +70,7 @@ function Slides() {
     defaultIndex: 0,
     prevArrow: (
       <div style={{ width: '30px', marginRight: '-30px' }}>
-        <i class='fas fa-arrow-left'></i>
-
-        {/* <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-        >
-          <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
-        </svg> */}
+        <i className='fas fa-arrow-left'></i>
       </div>
     ),
     nextArrow: (
@@ -84,30 +78,13 @@ function Slides() {
         className='next-arrow'
         style={{ width: '30px', marginLeft: '-30px' }}
       >
-        <i class='fas fa-arrow-right'></i>
-
-        {/* <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-        ><path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' /></svg> */}
+        <i className='fas fa-arrow-right'></i>
       </div>
     ),
     onChange: (previous, next) => {
       context.onSlideChange(previous, next);
-      console.log(context.currentSlide);
-      console.log(slideRef);
     },
   };
-
-  // Determines if Check on Learning has been completed and allows user to move forward
-  // TODO: This keeps fudging up. Need to fix
-
-  // if (context.currentSlide === 2 && context.quizComplete === false) {
-  //   console.log('Quiz shown');
-  //   document.querySelector('.next-arrow').style.display = 'none';
-  // }
 
   // Sets post-quiz state
   const onCompleteAction = (obj) => {
@@ -116,9 +93,7 @@ function Slides() {
   };
 
   // Renders custom results page
-  // TODO: Add button to rerender quiz.
   const renderCustomResultPage = (obj) => {
-    console.log(obj);
     return (
       <div>
         <h4>Well done, you may now continue with the lesson.</h4>
@@ -192,64 +167,127 @@ function Slides() {
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide3</h3>
-              <TermsComponent />
+            <TermsComponent />
+          </div>
+          <div className='slide'>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide4</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 5</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 6</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 7</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 8</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 9</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 10</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 11</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 12</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 13</h3>
-            </div>
-          </div>
-          <div className='slide'>
-            <div>
-              <h3 className='slide-title'>Slide 14</h3>
+            <div className='row p-3 m-1'>
+              <div className='col'>
+                <div>
+                  <h3 className='slide-title'>title</h3>
+                  <p>text</p>
+                </div>
+              </div>
+              <div className='col'>IMAGE</div>
             </div>
           </div>
         </Slide>
