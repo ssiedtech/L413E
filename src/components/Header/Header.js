@@ -113,7 +113,7 @@ export default function Header() {
         </div>
       </div>
       <span
-        className='d-flex mx-auto justify-content-center p-1'
+        className='d-flex mx-auto justify-content-end p-1'
         style={{
           width: '900px',
           backgroundColor: '#494949',

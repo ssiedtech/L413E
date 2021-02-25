@@ -4,13 +4,10 @@ import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
 import QuizComponent from '../QuizComponent/QuizComponent.js';
-<<<<<<< HEAD
 import FlashCardList from '../Flashcard/FlashCardList.js'
 import TermsComponent from '../TermsComponent/TermsComponent.js'
-=======
-import FlashCardList from '../Flashcard/FlashCardList.js';
 import TermList from '../TermsComponent/TermsComponent.js';
->>>>>>> c0445f1d8cb1b0f9883d21cb6d8b645fd8e3a2b1
+
 
 function Slides() {
   // State management
