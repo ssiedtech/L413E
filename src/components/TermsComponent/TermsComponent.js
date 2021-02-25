@@ -1,81 +1,56 @@
-
 import React from 'react';
 import './TermsComponent.css';
 
 class TermsComponent extends React.Component {
   state = {
-<<<<<<< HEAD
     term: '',
     definition: '',
-=======
-    term: "",
-    definition: ""
->>>>>>> 4060519031f97ee88d2a995400c7fb6b634a80b7
   };
 
   onClickButton1 = () => {
     this.setState({
-<<<<<<< HEAD
       term: 'DDRS',
       definition:
         "The automated reporting application maintained by BEIS that is used to prepare and review the Army General Fund financial statements and footnotes, and to prepare the Army's external required budgetary reports, including SF133, FACTS I, and FACTS II. ",
-=======
-      term:"DDRS",
-      definition: "The automated reporting application maintained by BEIS that is used to prepare and review the Army General Fund financial statements and footnotes, and to prepare the Army's external required budgetary reports, including SF133, FACTS I, and FACTS II. ",
->>>>>>> 4060519031f97ee88d2a995400c7fb6b634a80b7
     });
   };
 
   onClickButton2 = () => {
     this.setState({
-<<<<<<< HEAD
       term: 'Financial Statement',
       definition:
         "A formal record of the Army's financial activities for a period of time. These statements provide an overview of the Army's financial condition.",
-=======
-      term:"Financial Statement",
-      definition: "A formal record of the Army's financial activities for a period of time. These statements provide an overview of the Army's financial condition.",
->>>>>>> 4060519031f97ee88d2a995400c7fb6b634a80b7
     });
   };
 
   onClickButton3 = () => {
     this.setState({
-<<<<<<< HEAD
       term: 'Interface',
       definition:
         'The point of interconnection between two data systems. For example, an interface that enables GFEBS to communicate with and transfer data to an outside system, such as Defense Cash Accountability System (DCAS).',
-=======
-      term:"Interface",
-      definition: "The point of interconnection between two data systems. For example, an interface that enables GFEBS to communicate with and transfer data to an outside system, such as Defense Cash Accountability System (DCAS).",
->>>>>>> 4060519031f97ee88d2a995400c7fb6b634a80b7
     });
   };
 
   onClickButton4 = () => {
     this.setState({
-<<<<<<< HEAD
       term: 'Interface',
       definition:
         'DDRS: The capability in GFEBS of processing transactions the instant they are entered into the system. For instance, as soon as a financial document is posted, it is visible on the G/L. ',
-=======
-      term:"Interface",
-      definition: "DDRS: The capability in GFEBS of processing transactions the instant they are entered into the system. For instance, as soon as a financial document is posted, it is visible on the G/L. ",
->>>>>>> 4060519031f97ee88d2a995400c7fb6b634a80b7
     });
   };
 
   onClickButton5 = () => {
     this.setState({
-      term:"Interface",
-      definition: "A summary statement of all G/L debit and credit account balances in a double entry ledger on a given date.  This preliminary balance is used to point out errors in the Period End closing process. ",
+      term: 'Interface',
+      definition:
+        'A summary statement of all G/L debit and credit account balances in a double entry ledger on a given date.  This preliminary balance is used to point out errors in the Period End closing process. ',
     });
   };
 
   render() {
     return (
-      <div className="terms-container-row">
-        <div className="definition-container">
+      <div className='terms-container-row'>
+        <div className='definition-container'>
           <p>{this.state.term}</p>
           <p>{this.state.definition}</p>
         </div>
@@ -101,6 +76,4 @@ class TermsComponent extends React.Component {
   }
 }
 
-export default TermsComponent
-
-
+export default TermsComponent;
