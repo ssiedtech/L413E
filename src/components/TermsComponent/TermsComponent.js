@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
 import React, { Component } from "react";
 import './TermsComponent.css'
 
@@ -59,9 +56,6 @@ class TermsComponent extends React.Component {
       </div>
     );
   }
-=======
-import React, { useState } from 'react';
->>>>>>> 8ef41c2dc86728e23a22604acb0a10ca439de255
 import terms from './TermsComponentData.js';
 import './TermsComponent.css';
 import TermButton from './TermComponentButtons.js';
@@ -76,7 +70,6 @@ function TermsComponent() {
       </div>
     </div>
   );
->>>>>>> c0445f1d8cb1b0f9883d21cb6d8b645fd8e3a2b1
 }
 
 export default TermsComponent;
