@@ -3,15 +3,14 @@ import { Slide } from 'react-slideshow-image';
 import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
-<<<<<<< HEAD
+
 import QuizComponent from '../QuizComponent/QuizComponent.js';
 import FlashCardList from '../Flashcard/FlashCardList.js'
 import TermsComponent from '../TermsComponent/TermsComponent.js'
 import TermList from '../TermsComponent/TermsComponent.js';
 
-=======
-import TermsComponent from '../TermsComponent/TermsComponent';
->>>>>>> 2f33d1bc146ec72bf201e42cda901b6e5b928b22
+
+
 
 function Slides() {
   // State management
