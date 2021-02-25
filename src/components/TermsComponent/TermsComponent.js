@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import terms from './TermsComponentData.js';
 import './TermsComponent.css';
 import TermButton from './TermComponentButtons.js';
